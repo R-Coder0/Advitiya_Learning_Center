@@ -23,7 +23,7 @@ const programsData = [
   {
     id: 1,
     title: "Special Education Program",
-    shortDescription:   
+    shortDescription:
       "Our Special Education Program focuses on individualized learning strategies to support each student's unique needs...",
     fullDescription: `
       <p>At Advitiya Learning Center, we are committed to creating an inclusive and nurturing educational environment through our Special Education Program. We employ a comprehensive approach that integrates multi-sensory techniques and differentiated instruction, ensuring that every student's unique learning needs are met.</p><br>
@@ -31,19 +31,19 @@ const programsData = [
       <p>To foster a positive learning atmosphere, we implement Positive Behavior Support (PBS) strategies that set clear expectations and routines, while promoting social skills development. Collaborative learning is encouraged through group work, peer tutoring, and cooperative tasks, enhancing engagement and peer interaction.</p><br>
       <p>Individualized Education Programs (IEPs) guide each student's personalized learning path, addressing both academic and emotional needs. Our program emphasizes functional skills training through real-life simulations and project-based learning (PBL), preparing students for practical problem-solving.</p><br>
       <p>Additionally, we offer Functional Communication Training for students with communication challenges and incorporate mindfulness and relaxation techniques to help manage stress and improve focus. By combining adaptive learning technologies with social-emotional learning (SEL) practices, we aim to develop our students' emotional intelligence and interpersonal skills, ensuring a holistic and effective educational experience.</p>`,
-      image: program3,
-    },
-    {
-      id: 2,
-      title: "Therapy and Behavioral Support",
-      shortDescription:
+    image: program3,
+  },
+  {
+    id: 2,
+    title: "Therapy and Behavioral Support",
+    shortDescription:
       "We offer comprehensive therapy sessions including speech, occupational, and behavioral modification classes...",
-      fullDescription: `
+    fullDescription: `
       <p>At Advitiya Learning Center, our Therapy and Behavioral Support Program is meticulously designed to enhance the physical, emotional, and social well-being of our students. We provide a range of targeted therapies, including speech therapy to improve communication skills, occupational therapy to assist with daily living activities, and behavioral modification techniques to promote positive behavior.</p><br>
       <p>Each student's therapy plan is uniquely tailored to their specific needs and goals, ensuring a personalized approach that fosters growth and development. Our program also incorporates sensory integration strategies to help students manage sensory processing challenges effectively.</p><br>
       <p>Cognitive-behavioral therapy (CBT) is utilized to address emotional and psychological issues, while our social skills training sessions involve group activities and role-playing exercises to build confidence and improve interpersonal relationships.</p><br>
       <p>We understand the importance of a consistent therapeutic approach, which is why we work closely with families to ensure these strategies are implemented both at school and at home, creating a supportive and comprehensive care network.</p>`,
-      image: program1,
+    image: program1,
   },
   {
     id: 3,
@@ -87,91 +87,128 @@ const Homepage = () => {
     <div>
       {/* Hero Section */}
       <section className="home-hero">
-      <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
-        navigation={false}
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 5000 }}
-        loop={true}
-        className="hero-carousel"
-      >
-        {/* Slide 1 */}
-        <SwiperSlide>
-          <div
-            className="hero-slide"
-            style={{ backgroundImage: `url(${hero1})` }}
-          >
-            <div className="hero-overlay">
-              <div className="hero-content">
-                <h1 className="Hero-h1">Empowering Every Unique Ability</h1>
-                <p>
-                  Join Advitiya Learning Center to create an inclusive world
-                  through specialized education and support for differently-abled students.
-                </p>
-                <div className="cta-buttons">
-                  <Link to="/services" className="cta-button">
-                    Get Involved
-                  </Link>
-                  <Link to="/about" className="cta-secondary-button">
-                    Learn More
-                  </Link>
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          navigation={false}
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 5000 }}
+          loop={true}
+          className="hero-carousel"
+        >
+          {/* Slide 1 */}
+          <SwiperSlide>
+            <div
+              className="hero-slide"
+              style={{ backgroundImage: `url(${hero1})` }}
+            >
+              <div className="hero-overlay">
+                <div className="hero-content">
+                  <h1 className="Hero-h1">Empowering Every Unique Ability</h1>
+                  <p>
+                    Join Advitiya Learning Center to create an inclusive world
+                    through specialized education and support for
+                    differently-abled students.
+                  </p>
+                  <div className="cta-buttons">
+                    <Link to="/services" className="cta-button">
+                      Get Involved
+                    </Link>
+                    <Link to="/about" className="cta-secondary-button">
+                      Learn More
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </SwiperSlide>
-        {/* Slide 2 */}
-        <SwiperSlide>
-          <div
-            className="hero-slide"
-            style={{ backgroundImage: `url(${hero2})` }}
-          >
-            <div className="hero-overlay">
-              <div className="hero-content">
-                <h1 className="Hero-h1">Creating Inclusive Opportunities</h1>
-                <p>
-                  Be a part of our mission to empower differently-abled students
-                  with life skills and vocational training.
-                </p>
-                <div className="cta-buttons">
-                  <Link to="/volunteer" className="cta-button">
-                    Volunteer Now
-                  </Link>
-                  <Link to="/programs" className="cta-secondary-button">
-                    Explore Programs
-                  </Link>
+          </SwiperSlide>
+          {/* Slide 2 */}
+          <SwiperSlide>
+            <div
+              className="hero-slide"
+              style={{ backgroundImage: `url(${hero2})` }}
+            >
+              <div className="hero-overlay">
+                <div className="hero-content">
+                  <h1 className="Hero-h1">Creating Inclusive Opportunities</h1>
+                  <p>
+                    Be a part of our mission to empower differently-abled
+                    students with life skills and vocational training.
+                  </p>
+                  <div className="cta-buttons">
+                    <Link to="/volunteer" className="cta-button">
+                      Volunteer Now
+                    </Link>
+                    <Link to="/programs" className="cta-secondary-button">
+                      Explore Programs
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </SwiperSlide>
-        {/* Slide 3 */}
-        <SwiperSlide>
-          <div
-            className="hero-slide"
-            style={{ backgroundImage: `url(${hero3})` }}
-          >
-            <div className="hero-overlay">
-              <div className="hero-content">
-                <h1 className="Hero-h1">Together, We Build Futures</h1>
-                <p>
-                  Support Advitiya Learning Center to provide education, care, and
-                  opportunities for children in need.
-                </p>
-                <div className="cta-buttons">
-                  <Link to="/donate" className="cta-button">
-                    Donate Now
-                  </Link>
-                  <Link to="/contact" className="cta-secondary-button">
-                    Contact Us
-                  </Link>
+          </SwiperSlide>
+          {/* Slide 3 */}
+          <SwiperSlide>
+            <div
+              className="hero-slide"
+              style={{ backgroundImage: `url(${hero3})` }}
+            >
+              <div className="hero-overlay">
+                <div className="hero-content">
+                  <h1 className="Hero-h1">Together, We Build Futures</h1>
+                  <p>
+                    Support Advitiya Learning Center to provide education, care,
+                    and opportunities for children in need.
+                  </p>
+                  <div className="cta-buttons">
+                    <Link to="/donate" className="cta-button">
+                      Donate Now
+                    </Link>
+                    <Link to="/contact" className="cta-secondary-button">
+                      Contact Us
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </SwiperSlide>
-      </Swiper>
-    </section>
+          </SwiperSlide>
+        </Swiper>
+      </section>
+      {/* About Section */}
+      <section className="home-about-section">
+  <div className="home-about-container">
+    <div className="home-about-content">
+      <div className="home-about-text">
+        <h2>About Us</h2>
+        <p>
+          Advitiya Learning Center is dedicated to empowering differently-abled students by providing:
+        </p>
+        <ul>
+          <li>Customized educational plans tailored to their individual needs.</li>
+          <li>Comprehensive vocational training for practical life skills.</li>
+          <li>Holistic therapies for physical, emotional, and cognitive growth.</li>
+        </ul>
+        <h3>Our Mission</h3>
+        <p>
+          To inspire confidence, independence, and creativity among students, enabling them to achieve their fullest potential.
+        </p>
+        <h3>What We Offer</h3>
+        <ul>
+          <li>A team of skilled educators, therapists, and specialists working collaboratively.</li>
+          <li>A nurturing and inclusive environment encouraging self-expression.</li>
+          <li>Comprehensive support for both students and their families.</li>
+        </ul>
+        <p>
+          Our center is a beacon of hope, combining education, therapy, and skill-building to create a brighter future for our students.
+        </p>
+        <a href="/about" className="cta-button">Learn More</a>
+      </div>
+      <div className="home-about-images">
+        <img src={aboutus} alt="Empowering Education" />
+        <img src={aboutus} alt="Inclusive Community" />
+      </div>
+    </div>
+  </div>
+</section>
       {/* Programs Section */}
       <section className="programs fade-in">
         <div className="container">
@@ -212,9 +249,9 @@ const Homepage = () => {
             </button>
             <h2>{selectedProgram.title}</h2>
             <img src={selectedProgram.image} alt={selectedProgram.title} />
-              <button className="enquiry-button" onClick={openEnquiryForm}>
-                Enquire Now
-              </button>
+            <button className="enquiry-button" onClick={openEnquiryForm}>
+              Enquire Now
+            </button>
             <div
               className="program-description"
               dangerouslySetInnerHTML={{
@@ -270,7 +307,7 @@ const Homepage = () => {
               </div>
             </div>
             <div className="service-card">
-              <img src={service3   } alt="Counseling and Support" />
+              <img src={service3} alt="Counseling and Support" />
               <div className="service-content">
                 <h3 className="service-title">Counseling and Support</h3>
                 <p className="service-description">
@@ -298,42 +335,7 @@ const Homepage = () => {
           </div>
         </div>
       </section>
-      {/* About Section */}
-      <section className="home-about">
-        <div className="container">
-          <div className="about-content">
-            <div className="about-text">
-              <h2>About Us</h2>
-              <p>
-                At Advitiya Learning Center, we are dedicated to enhancing the
-                lives of differently-abled students through tailored education,
-                personalized support, and vocational training. Our mission is to
-                empower each student to realize their full potential, fostering
-                independence and confidence.
-              </p>
-              <p>
-                Our experienced team of educators, therapists, and specialists
-                work collaboratively to design individualized learning plans,
-                ensuring that every student receives the attention and resources
-                they need to thrive in their academic and personal lives.
-              </p>
-              <p>
-                We are committed to providing a nurturing and inclusive
-                environment that encourages growth, creativity, and
-                self-expression, positively impacting the lives of our students
-                and their families.
-              </p>
-              <Link to="/about" className="cta-button">
-                Learn More
-              </Link>
-            </div>
-            <div className="about-image">
-              <img src={aboutus} alt="About Us" />
-              <img src={aboutus} alt="About Us" />
-            </div>
-          </div>
-        </div>
-      </section>
+
       {/* Testimonials Section */}
       <section className="testimonials">
         <div className="container">

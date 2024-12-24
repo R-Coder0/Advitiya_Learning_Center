@@ -1,26 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 :root {
-  --primary-color: #4B007D;
-  --secondary-color: #FF00C3;
-  --accent-color: #9D4EDD;
-  --light-color: #ffffff;
-  --text-color: #333333;
+  --primary-color: #33808C; /* Muted Teal */
+  --secondary-color: #3B506D; /* Deep Blue-Grey */
+  --accent-color: #f8E0F8; /* Soft Lavender */
+  --light-color: #FFFFFF; /* Pure White for backgrounds */
+  --text-color: #3B506D; /* Deep Blue-Grey for headings and text */
 }
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 .navbar {
-  background-color: var(--light-color);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
   padding: 1rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 1000;
+}
+
+.navbar-transparent {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.navbar-transparent .nav-links a,
+.navbar-transparent .dropbtn,
+.navbar-transparent .contact-info a,
+.navbar-transparent .contact-details p {
+  color: #ffffff; /* White text on transparent background */
+}
+
+.nav-links a,
+.dropbtn,
+.contact-info a,
+.contact-details p {
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.dropbtn:hover,
+.contact-info a:hover,
+.contact-details p:hover {
+  color: var(--primary-color); /* Accent color on hover */
+}
+
+.navbar-scrolled {
+  background-color: var(--light-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-container {
@@ -55,7 +87,7 @@
 }
 
 .nav-links a:hover {
-  color: var(--secondary-color);
+  color: #33808C;
   transform: scale(1.05);
 }
 
@@ -68,7 +100,7 @@
 .phone-icon {
   font-size: 2rem;
   color: var(--primary-color);
-  background-color: var(--secondary-color);
+  background-color: #ffffff00;
   padding: 0.5rem;
   border-radius: 50%;
 }
@@ -108,8 +140,6 @@
   font-weight: 500;
   font-family: "Outfit", sans-serif;
   transition: color 0.3s ease, transform 0.3s ease;
-  position: relative;
-  display: inline-block;
 }
 
 .dropbtn::after {
@@ -125,13 +155,14 @@
   left: 50%;
   transform: translateX(-50%);
   background-color: #ffffff;
-  min-width: 200px;
+  min-width: 415px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  border-radius: 8px;
+  border-radius: 1px;
   margin-top: 5px;
-}
+  text-align: start;
 
+}
 .dropdown-content a {
   color: var(--text-color);
   padding: 12px 16px;
@@ -141,11 +172,12 @@
   font-size: 1.3rem;
   font-family: "Outfit", sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
+  border-bottom: 1px dashed black;
 }
 
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
-  color: var(--secondary-color);
+  background-color: #33808C;
+  color: #f8E0F8;
 }
 
 .dropdown:hover .dropdown-content {
@@ -159,7 +191,18 @@
 .dropbtn:hover {
   color: var(--secondary-color);
   transform: scale(1.05);
-  text-decoration: underline;
+}
+
+.menu-toggle {
+  display: none; /* Hide by default */
+}
+
+/* Action Buttons Container */
+.action-buttons {
+  display: flex;
+}
+.mobile-action-buttons{
+  display: none;
 }
 
 /* Mobile-specific styles */
@@ -168,12 +211,15 @@
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 64px;
+    top: 80px;
     left: 0;
     width: 100%;
+    height: calc(80vh - 64px); /* Occupy the remaining height */
     background-color: var(--light-color);
     padding: 1rem;
     z-index: 999;
+    overflow-y: auto; /* Enable scrolling */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links.open {
@@ -184,160 +230,185 @@
     padding: 10px;
     text-align: center;
     border-bottom: 1px solid #f0f0f0;
+    color: var(--text-color);
+    text-decoration: none;
+  }
+
+  .nav-links a:hover {
+    background-color: #f0f0f0;
+    color: var(--secondary-color);
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-color);
+    z-index: 1000;
+  }
+
+  /* Dropdown for Mobile */
+  .dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dropdown .dropbtn {
     width: 100%;
+    text-align: center;
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+
+  .dropdown .dropbtn:hover {
+    background-color: #f0f0f0;
+    color: var(--secondary-color);
   }
 
   .dropdown-content {
     display: none;
-    position: relative;
+    flex-direction: column;
     width: 100%;
     background-color: var(--light-color);
-    margin: 0;
-    box-shadow: none;
+    border-top: 1px solid #f0f0f0;
     padding: 0;
-  }
-
-  .dropdown.open .dropdown-content {
-    display: block;
+    margin-top: 40px;
   }
 
   .dropdown-content a {
-    padding: 10px;
+    padding: 10px 15px;
     text-align: center;
-    border-bottom: 1px solid #f0f0f0;
-    width: 100%;
+    border-bottom: 1px dashed #000000;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
-  .dropdown:hover .dropdown-content {
-    display: block;
+  .dropdown-content a:hover {
+    background-color: #f0f0f0;
+    color: var(--secondary-color);
   }
 
-  .dropbtn {
-    width: 100%;
-    text-align: center;
-  }
-
-  .dropbtn::after {
-    position: relative;
-    top: 2px;
-    margin-left: 5px;
-  }
-
-  /* Fixing overlapping social media icons */
-  .social-icons-container {
-    position: relative;
-    z-index: 10; /* Ensure dropdown doesn't overlap social icons */
-  }
-
-  .dropdown-content {
-    z-index: 1000; /* Ensure dropdown appears above other elements */
-  }
-
-  .contact-info {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: block;
-    font-size: 2rem;
-    cursor: pointer;
-    color: var(--primary-color);
-  }
-}
-/* Responsive Design */
-@media (max-width: 768px) {
-  .navbar{
-    padding: 0px 13px 0 10px;
-  }
-  .navbar-container{
-    padding: 0px;
-  }
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 64px;
-    left: 0;
-    width: 100%;
-    background-color: var(--light-color);
-    padding: 1rem;
-    z-index: 999;
-  }
-  .donate-btn{
-    margin-right: 0px;
-  }
-  .nav-links.open {
+  .dropdown.open .dropdown-content {
     display: flex;
   }
 
-  .nav-links a {
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #f0f0f0;
+  /* Mobile action buttons */
+  .mobile-action-buttons {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
-  .contact-info {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: block;
-    font-size: 2rem;
+  .mobile-action-buttons .donate-now-btn {
+    background-color: #f8c202; /* Gold color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
     cursor: pointer;
-    color: var(--primary-color);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .donate-now-btn:hover {
+    background-color: #d4a802;
+    transform: scale(1.05);
+  }
+
+  .mobile-action-buttons .contact-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .contact-btn:hover {
+    background-color: #333;
+    transform: scale(1.05);
+  }
+
+  .phone-icon {
+    font-size: 1.2rem;
   }
 }
 
-@media (max-width: 768px){
-  .donate-btn{
-    margin-right: 0px;
-  }
-}
-/* Navbar.css */
-
-.donate-btn {
-  background-color: #ff69b4;
-  color: white;
+.donate-now-btn {
+  background-color: #33808C; /* Gold color */
+  color: #fff;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px 0px 0px 50px;
   font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
   cursor: pointer;
-  animation: blink 2s infinite, pulse 1.5s infinite alternate;
-  box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
   transition: transform 0.3s ease, background-color 0.3s ease;
-  margin-right: 12px;
 }
 
-.donate-btn:hover {
-  transform: scale(1.1);
-  background-color: #ff1493;
+.donate-now-btn:hover {
+  background-color: #3B506D; /* Darker gold on hover */
+  transform: scale(1.05);
 }
 
-@keyframes blink {
-  0%, 50%, 100% {
-    background-color: #ff69b4;
-    color: white;
-    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
-  }
-  25%, 75% {
-    background-color: #ff1493;
-    color: var(--primary-color);
-    box-shadow: 0 0 25px rgba(255, 20, 147, 0.9);
+/* Contact Button */
+.contact-btn {
+  background-color: #000; /* Black */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0px 50px 50px 0px;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #333; /* Darker shade on hover */
+  transform: scale(1.05);
+  color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .action-buttons {
+display: none;
   }
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
-  }
-  100% {
-    transform: scale(1.1);
-    box-shadow: 0 0 30px rgba(255, 105, 180, 1);
-  }
+/* Phone Icon */
+.phone-icon {
+  font-size: 2rem;
+  color: var(--light-color); /* Matches text color */
 }
 
+/* Popup Overlay */
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -361,7 +432,6 @@
   animation: slideIn 0.3s ease;
 }
 
-/* Heading Style */
 .popup-content h2 {
   margin-bottom: 15px;
   color: #ff69b4; /* Matching with your theme */
@@ -369,7 +439,6 @@
   font-weight: 700; /* Bold font weight */
 }
 
-/* Donate Button */
 .donate-link {
   display: inline-block;
   padding: 12px 25px;
@@ -385,7 +454,6 @@
   transform: scale(1.05); /* Slightly scale up on hover */
 }
 
-/* Close Button */
 .close-popup {
   margin-top: 15px;
   padding: 10px 20px;
