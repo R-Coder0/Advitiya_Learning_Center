@@ -15,6 +15,12 @@ import service4 from "../assets/Homepage/service4.jpg";
 import hero1 from "../assets/Homepage/hero1.jpg";
 import hero2 from "../assets/Homepage/hero2.jpg";
 import hero3 from "../assets/Homepage/hero3.jpg";
+import review1 from '../assets/Reviews/Baby Rani.png'
+import review2 from '../assets/Reviews/Himashu Sharma.png'
+import review3 from '../assets/Reviews/Jatin Khurana.png'
+import review4 from '../assets/Reviews/manasvi Sharma.png'
+import review5 from '../assets/Reviews/som dutt.png'
+import reviewIcon from '../assets/Reviews/review icon.png'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -407,12 +413,14 @@ const Homepage = () => {
             pagination={{ clickable: true }}
             autoplay={{ delay: 3500, disableOnInteraction: false }}
             spaceBetween={20}
-            slidesPerView={5}
+            slidesPerView={4}
             breakpoints={{
-              640: { slidesPerView: 2 }, // 2 services on small screens
-              768: { slidesPerView: 3 }, // 3 services on tablets
-              1024: { slidesPerView: 4 }, // 4 services on medium screens
-              1200: { slidesPerView: 5 }, 
+              400: {slidesPerView: 1},
+              576: {slidesPerView: 1},
+              640: { slidesPerView: 1 }, // 2 services on small screens
+              768: { slidesPerView: 2 }, // 3 services on tablets
+              1024: { slidesPerView: 3 }, // 4 services on medium screens
+              1440: { slidesPerView: 4 },
             }}
             className="services-slider"
           >
@@ -441,21 +449,20 @@ const Homepage = () => {
       <section className="testimonials">
         <div className="container">
           <h2 className="testimonials-heading">Testimonials</h2>
-          <h3 className="testimonials-subheading">What Parents Say</h3>
           <div className="testimonial-list">
             <div className="testimonial-item">
               <div className="testimonial-header">
                 <img
-                  src="https://via.placeholder.com/50"
+                  src={review5}
                   alt="Profile"
                   className="testimonial-profile"
                 />
                 <div>
-                  <h4 className="testimonial-name">Gaurav Dhaka</h4>
-                  <p className="testimonial-time">a year ago</p>
+                  <h4 className="testimonial-name">Som Dutt</h4>
+                  <p className="testimonial-time">2 Month ago</p>
                 </div>
                 <img
-                  src="https://via.placeholder.com/20"
+                  src={reviewIcon}
                   alt="Google"
                   className="testimonial-google-icon"
                 />
@@ -463,24 +470,25 @@ const Homepage = () => {
               <div className="testimonial-content">
                 <div className="testimonial-stars">★★★★★</div>
                 <p>
-                  The best special school with dedicated staff and tailored
-                  sessions for children with disabilities.
+                  Amazing place for therapy near me! The staff at Advitiya is
+                  highly trained, and the services like counselling and speech
+                  therapy are very effective.
                 </p>
               </div>
             </div>
             <div className="testimonial-item">
               <div className="testimonial-header">
                 <img
-                  src="https://via.placeholder.com/50"
+                  src={review4}
                   alt="Profile"
                   className="testimonial-profile"
                 />
                 <div>
-                  <h4 className="testimonial-name">Yensh Nim</h4>
-                  <p className="testimonial-time">a year ago</p>
+                  <h4 className="testimonial-name">Manasvi Sharma</h4>
+                  <p className="testimonial-time">2 month ago</p>
                 </div>
                 <img
-                  src="https://via.placeholder.com/20"
+                  src={reviewIcon}
                   alt="Google"
                   className="testimonial-google-icon"
                 />
@@ -488,24 +496,25 @@ const Homepage = () => {
               <div className="testimonial-content">
                 <div className="testimonial-stars">★★★★★</div>
                 <p>
-                  Exceptional school for special needs children offering
-                  therapies for ASD, ADHD, and more.
+                  I am working as an intern here and I’m extremely grateful to
+                  Rita ma’am and Priya ma’am! The kids here are extremely
+                  exceptional and welcoming.
                 </p>
               </div>
             </div>
             <div className="testimonial-item">
               <div className="testimonial-header">
                 <img
-                  src="https://via.placeholder.com/50"
+                  src={review2}
                   alt="Profile"
                   className="testimonial-profile"
                 />
                 <div>
-                  <h4 className="testimonial-name">Yensh Nim</h4>
+                  <h4 className="testimonial-name">Himanshu Sharma</h4>
                   <p className="testimonial-time">a year ago</p>
                 </div>
                 <img
-                  src="https://via.placeholder.com/20"
+                  src={reviewIcon}
                   alt="Google"
                   className="testimonial-google-icon"
                 />
@@ -513,24 +522,24 @@ const Homepage = () => {
               <div className="testimonial-content">
                 <div className="testimonial-stars">★★★★★</div>
                 <p>
-                  Exceptional school for special needs children offering
-                  therapies for ASD, ADHD, and more.
+                  Well-behaved teachers and excellent management for each
+                  student. Teachers are well-educated and polite in nature.
                 </p>
               </div>
             </div>
             <div className="testimonial-item">
               <div className="testimonial-header">
                 <img
-                  src="https://via.placeholder.com/50"
+                  src={review1}
                   alt="Profile"
                   className="testimonial-profile"
                 />
                 <div>
-                  <h4 className="testimonial-name">Yensh Nim</h4>
-                  <p className="testimonial-time">a year ago</p>
+                  <h4 className="testimonial-name">Baby Rani</h4>
+                  <p className="testimonial-time">2 month ago</p>
                 </div>
                 <img
-                  src="https://via.placeholder.com/20"
+                  src={reviewIcon}
                   alt="Google"
                   className="testimonial-google-icon"
                 />
@@ -538,24 +547,25 @@ const Homepage = () => {
               <div className="testimonial-content">
                 <div className="testimonial-stars">★★★★★</div>
                 <p>
-                  Exceptional school for special needs children offering
-                  therapies for ASD, ADHD, and more.
+                  Teachers are very hardworking. This school fosters a welcoming
+                  and nurturing environment where students are encouraged to
+                  grow both academically and personally.
                 </p>
               </div>
             </div>
             <div className="testimonial-item">
               <div className="testimonial-header">
                 <img
-                  src="https://via.placeholder.com/50"
+                  src={review3}
                   alt="Profile"
                   className="testimonial-profile"
                 />
                 <div>
-                  <h4 className="testimonial-name">Abhishek Rajput</h4>
-                  <p className="testimonial-time">a year ago</p>
+                  <h4 className="testimonial-name">Jatin Khurana</h4>
+                  <p className="testimonial-time">3 Week ago</p>
                 </div>
                 <img
-                  src="https://via.placeholder.com/20"
+                  src={reviewIcon}
                   alt="Google"
                   className="testimonial-google-icon"
                 />
@@ -563,8 +573,11 @@ const Homepage = () => {
               <div className="testimonial-content">
                 <div className="testimonial-stars">★★★★★</div>
                 <p>
-                  The support and encouragement my child receives from Advitiya
-                  is unmatched. The staff is dedicated and compassionate.
+                  The environment at Advitiya for kids is really healthy. I have
+                  an acquaintance (kid) who goes there, and the confidence and
+                  improvement I have seen in her is remarkable. Its the best
+                  learning center for kids with special needs. If you know
+                  someone or have a kid, this center is highly recommended.
                 </p>
               </div>
             </div>
