@@ -1,21 +1,19 @@
-const GetInvolved = () => {
+import { Link } from "react-router-dom";
+import "../styles/ComingSoon.css";
+
+const GetInvolvedPlaceholder = () => {
   return (
-    <div>
-      <h1>Get Involved</h1>
-      <section>
-        <h2>Volunteer Opportunities</h2>
-        <p>Information on how you can volunteer with us.</p>
-      </section>
-      <section>
-        <h2>Partnerships</h2>
-        <p>How businesses and organizations can partner with us.</p>
-      </section>
-      <section>
-        <h2>Events</h2>
-        <p>Upcoming events and how to participate.</p>
-      </section>
+    <div className="coming-soon">
+      <div className="coming-soon-container">
+        <h1>Coming Soon</h1>
+        <p>The Get Involved page is currently under maintenance.</p>
+        <p>We’re working hard to bring you this feature soon!</p>
+        <Link to="/" className="back-home-btn">
+          Go Back to Home
+        </Link>
+      </div>
     </div>
   );
 };
 
-export default GetInvolved;
+export default GetInvolvedPlaceholder;

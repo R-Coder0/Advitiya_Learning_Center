@@ -193,10 +193,10 @@ const Homepage = () => {
                     students with life skills and vocational training.
                   </p>
                   <div className="cta-buttons">
-                    <Link to="/volunteer" className="cta-button">
+                    <Link to="/contact" className="cta-button">
                       Volunteer Now
                     </Link>
-                    <Link to="/programs" className="cta-secondary-button">
+                    <Link to="/services" className="cta-secondary-button">
                       Explore Programs
                     </Link>
                   </div>
@@ -415,9 +415,10 @@ const Homepage = () => {
             spaceBetween={20}
             slidesPerView={4}
             breakpoints={{
+              300: {slidesPerView: 1},    
               400: {slidesPerView: 1},
-              576: {slidesPerView: 1},
-              640: { slidesPerView: 1 }, // 2 services on small screens
+              576: {slidesPerView: 2},
+              640: { slidesPerView: 2 }, // 2 services on small screens
               768: { slidesPerView: 2 }, // 3 services on tablets
               1024: { slidesPerView: 3 }, // 4 services on medium screens
               1440: { slidesPerView: 4 },
