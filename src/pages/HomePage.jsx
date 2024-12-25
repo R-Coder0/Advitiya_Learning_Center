@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 import aboutus from "../assets/aboutsection.jpg";
+import aboutus2 from "../assets/aboutsection2.jpg";
 import EnquiryModal from "../components/EnquiryModal";
 import program1 from "../assets/Homepage/program1.jpg";
 import program2 from "../assets/Homepage/program2.jpg";
@@ -56,6 +57,57 @@ const programsData = [
       <p>Moreover, our program includes job coaching and placement services, assisting students in finding meaningful employment opportunities. We partner with local businesses and organizations to provide internships and job shadowing experiences, allowing students to apply their skills in supportive environments.</p><br>
       <p>By offering a comprehensive approach to vocational training, we empower our students to achieve their full potential and lead fulfilling lives.</p>`,
     image: program2,
+  },
+];
+const services = [
+  {
+    title: "Individualized Learning Plans",
+    description:
+      "Customized education plans that cater to each student's learning style and pace.",
+    image: service1,
+  },
+  {
+    title: "Therapeutic Services",
+    description:
+      "Comprehensive therapy options including speech, occupational, and physical therapy.",
+    image: service2,
+  },
+  {
+    title: "Counseling and Support",
+    description:
+      "Mental health support services for students and their families to foster emotional well-being.",
+    image: service3,
+  },
+  {
+    title: "NIOS Classes",
+    description:
+      "Open schooling options through NIOS to help students achieve academic qualifications.",
+    image: service4,
+  },
+  // Demo Services
+  {
+    title: "Vocational Training",
+    description:
+      "Hands-on training in various vocational skills to enhance employability.",
+    image: service4,
+  },
+  {
+    title: "Art Therapy",
+    description:
+      "Creative therapy sessions to encourage expression and emotional healing.",
+    image: service3,
+  },
+  {
+    title: "Music Therapy",
+    description:
+      "Music-based interventions to improve physical and emotional health.",
+    image: service2,
+  },
+  {
+    title: "Sports Activities",
+    description:
+      "Inclusive sports programs to develop physical fitness and teamwork skills.",
+    image: service1,
   },
 ];
 const renderProgramDescription = (description) => {
@@ -173,42 +225,112 @@ const Homepage = () => {
           </SwiperSlide>
         </Swiper>
       </section>
-      {/* About Section */}
+      {/* About Section1 */}
       <section className="home-about-section">
-  <div className="home-about-container">
-    <div className="home-about-content">
-      <div className="home-about-text">
-        <h2>About Us</h2>
-        <p>
-          Advitiya Learning Center is dedicated to empowering differently-abled students by providing:
-        </p>
-        <ul>
-          <li>Customized educational plans tailored to their individual needs.</li>
-          <li>Comprehensive vocational training for practical life skills.</li>
-          <li>Holistic therapies for physical, emotional, and cognitive growth.</li>
-        </ul>
-        <h3>Our Mission</h3>
-        <p>
-          To inspire confidence, independence, and creativity among students, enabling them to achieve their fullest potential.
-        </p>
-        <h3>What We Offer</h3>
-        <ul>
-          <li>A team of skilled educators, therapists, and specialists working collaboratively.</li>
-          <li>A nurturing and inclusive environment encouraging self-expression.</li>
-          <li>Comprehensive support for both students and their families.</li>
-        </ul>
-        <p>
-          Our center is a beacon of hope, combining education, therapy, and skill-building to create a brighter future for our students.
-        </p>
-        <a href="/about" className="cta-button">Learn More</a>
-      </div>
-      <div className="home-about-images">
-        <img src={aboutus} alt="Empowering Education" />
-        <img src={aboutus} alt="Inclusive Community" />
-      </div>
-    </div>
-  </div>
-</section>
+        <div className="home-about-container">
+          <div className="home-about-content">
+            <h2 className="home-about-title">Discover Our Mission</h2>
+            <h3 className="home-about-subtitle">Who We Are</h3>
+            <p>
+              Advitiya Rehabilitation and Learning Center is a dedicated
+              organization committed to transforming lives by empowering
+              differently-abled individuals. We aim to create an inclusive
+              environment where every individual can thrive, learn, and grow to
+              their fullest potential.
+            </p>
+            <h3 className="home-about-subtitle">What We Offer</h3>
+            <ul className="home-about-list">
+              <li>
+                Customized educational programs tailored to the unique needs of
+                each student.
+              </li>
+              <li>
+                Vocational training to build practical skills for independence
+                and employment.
+              </li>
+              <li>
+                Holistic therapies focusing on physical, emotional, and
+                cognitive development.
+              </li>
+              <li>
+                Inclusive support for families to foster a community of
+                understanding and care.
+              </li>
+            </ul>
+
+            <a href="/about" className="home-about-button">
+              Learn More
+            </a>
+          </div>
+          <div className="home-about-image">
+            <img
+              src={aboutus}
+              alt="Advitiya Rehabilitation and Learning Center"
+            />
+          </div>
+        </div>
+      </section>
+      {/* About Section2 */}
+      <section className="home-about-section2">
+        <div className="home-about-container2">
+          <div className="home-about-content">
+            <h2 className="home-about-title">Building Brighter Futures</h2>
+            <h3 className="home-about-subtitle">Our Vision</h3>
+            <p>
+              At Advitiya Rehabilitation and Learning Center, we envision a
+              world where differently-abled individuals are empowered to live
+              fulfilling and independent lives. Our goal is to foster an
+              inclusive society where every individual has the opportunity to
+              succeed and contribute.
+            </p>
+            <h3 className="home-about-subtitle">Key Highlights</h3>
+            <ul className="home-about-list">
+              <li>
+                An inclusive environment designed to promote confidence,
+                creativity, and personal growth.
+              </li>
+              <li>
+                Access to cutting-edge tools and resources to ensure the best
+                possible outcomes for every learner.
+              </li>
+              <li>
+                Collaboration with educators, therapists, and families to create
+                tailored development plans.
+              </li>
+              <li>
+                Focus on life skills, career training, and holistic well-being
+                for sustainable growth.
+              </li>
+            </ul>
+            <h3 className="home-about-subtitle">Our Commitment</h3>
+            <ul className="home-about-list">
+              <li>
+                To provide world-class education and therapies that cater to
+                individual needs.
+              </li>
+              <li>
+                To create an engaging and supportive community where everyone
+                feels valued.
+              </li>
+              <li>
+                To inspire resilience, independence, and self-belief in every
+                learner.
+              </li>
+            </ul>
+
+            <a href="/about" className="home-about-button">
+              Learn More
+            </a>
+          </div>
+          <div className="home-about-image">
+            <img
+              src={aboutus2}
+              alt="Advitiya Rehabilitation and Learning Center"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Programs Section */}
       <section className="programs fade-in">
         <div className="container">
@@ -274,68 +396,47 @@ const Homepage = () => {
       {/* Services Section */}
       <section className="homepage-services">
         <div className="container">
-          <h2>Our Services</h2>
-          <p>
+          <h2 className="section-title">Our Services</h2>
+          <p className="section-description">
             Explore our wide range of specialized services tailored to the needs
             of differently-abled students.
           </p>
-          <div className="services-container">
-            <div className="service-card">
-              <img src={service1} alt="Individualized Learning Plans" />
-              <div className="service-content">
-                <h3 className="service-title">Individualized Learning Plans</h3>
-                <p className="service-description">
-                  Customized education plans that cater to each student&apos;s
-                  learning style and pace.
-                </p>
-                <Link to="/services" className="know-more-btn">
-                  Know More
-                </Link>
-              </div>
-            </div>
-            <div className="service-card">
-              <img src={service2} alt="Therapeutic Services" />
-              <div className="service-content">
-                <h3 className="service-title">Therapeutic Services</h3>
-                <p className="service-description">
-                  Comprehensive therapy options including speech, occupational,
-                  and physical therapy.
-                </p>
-                <Link to="/services" className="know-more-btn">
-                  Know More
-                </Link>
-              </div>
-            </div>
-            <div className="service-card">
-              <img src={service3} alt="Counseling and Support" />
-              <div className="service-content">
-                <h3 className="service-title">Counseling and Support</h3>
-                <p className="service-description">
-                  Mental health support services for students and their families
-                  to foster emotional well-being.
-                </p>
-                <Link to="/services" className="know-more-btn">
-                  Know More
-                </Link>
-              </div>
-            </div>
-            <div className="service-card">
-              <img src={service4} alt="NIOS Classes" />
-              <div className="service-content">
-                <h3 className="service-title">NIOS Classes</h3>
-                <p className="service-description">
-                  Open schooling options through NIOS to help students achieve
-                  academic qualifications.
-                </p>
-                <Link to="/services" className="know-more-btn">
-                  Know More
-                </Link>
-              </div>
-            </div>
-          </div>
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            navigation
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 3500, disableOnInteraction: false }}
+            spaceBetween={20}
+            slidesPerView={5}
+            breakpoints={{
+              640: { slidesPerView: 2 }, // 2 services on small screens
+              768: { slidesPerView: 3 }, // 3 services on tablets
+              1024: { slidesPerView: 4 }, // 4 services on medium screens
+              1200: { slidesPerView: 5 }, 
+            }}
+            className="services-slider"
+          >
+            {services.map((service, index) => (
+              <SwiperSlide key={index}>
+                <div className="service-card">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="service-image"
+                  />
+                  <div className="service-content">
+                    <h3 className="service-title">{service.title}</h3>
+                    <p className="service-description">{service.description}</p>
+                    <Link to="/services" className="know-more-btn">
+                      Know More
+                    </Link>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="testimonials">
         <div className="container">

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../styles/AboutUs.css"; // Ensure this file contains the styles
-import aboutImage1 from "../assets/aboutsection.jpg"; // Replace with your image path
-import aboutImage2 from "../assets/aboutsection.jpg"; // Replace with your image path
+import aboutImage1 from "../assets/About/About.jpg"; // Replace with your image path
+import aboutImage2 from "../assets/About/about2.jpg"; // Replace with your image path
 import { FaEye, FaHome } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
