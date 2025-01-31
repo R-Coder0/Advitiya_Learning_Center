@@ -72,7 +72,7 @@ const AboutHeroSection = () => {
               Founded in 2021 and based in Sector 2, Rohini, Delhi, Advitiya Rehabilitation and Learning Center is a sanctuary for children with special needs and their families. Our mission is to provide holistic, individualized therapeutic and educational support to empower children to navigate life’s challenges with confidence, independence, and self-worth. By blending specialized therapies, academic support, life skills training, and vocational activities, we prepare children not only for daily tasks but also for life itself.
             </p>
             <p>
-              <b>Our Moto</b>: "Empowering the Next Generation of Leaders"<br />
+              <b>Our Moto</b>: &quot;Empowering the Next Generation of Leaders&quot;<br />
               At Advitiya, we believe that every child has the potential to be a leader in their own unique way. Through patience, perseverance, and personalized care, we aim to unlock their abilities, enabling them to thrive in every aspect of life.
             </p>
             <div className="vision-section">
@@ -111,7 +111,7 @@ const AboutHeroSection = () => {
           Our mission is to provide comprehensive support that spans therapy, education, and emotional development.
           We are dedicated to enhancing the lives of children with special needs and their families by fostering a
           nurturing environment where they can reach their full potential. Through a multidisciplinary approach,
-          we address every aspect of a child's development, from motor skills to communication and social interaction.
+          we address every aspect of a child&apos;s development, from motor skills to communication and social interaction.
         </p>
         <div className="mission-content">
           <ul className="mission-list">
@@ -210,7 +210,7 @@ const AboutHeroSection = () => {
             <h2 className="home-about-title">About Ms. Priya Deshwal</h2>
             <p>
               About Ms. Priya Deshwal
-              Ms. Priya Deshwal brings unparalleled dynamism to her role at Advitiya, seamlessly combining charisma, creativity, and precision. Her radiant positivity and tireless energy are matched only by her exceptional organizational skills and acute attention to detail. From flawlessly curated to-do lists to her artistic approach in meetings, Ms. Priya infuses structure and innovation into every initiative she undertakes.
+              brings unparalleled dynamism to her role at Advitiya, seamlessly combining charisma, creativity, and precision. Her radiant positivity and tireless energy are matched only by her exceptional organizational skills and acute attention to detail. From flawlessly curated to-do lists to her artistic approach in meetings, Ms. Priya infuses structure and innovation into every initiative she undertakes.
               <br />
               <br />
               Her warmth and approachability make her a trusted confidant for staff and children, while her disciplined and structured methods command respect and foster accountability. Ms. Priya possesses a rare ability to balance compassionate engagement with firm guidance, ensuring that children thrive within a supportive yet structured environment. Her deep passion for empowering children with special needs is evident in her dedication to even the smallest details, which consistently elevate the quality of classroom activities, program coordination, and team collaboration.

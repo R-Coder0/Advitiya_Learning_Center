@@ -610,7 +610,7 @@
     justify-content: left;
   }
 
-  .about-hero .hero-content h2 {
+  .about-hero .hero-content h1 {
     font-size: 2rem;
     text-align: left;
   }
@@ -633,6 +633,12 @@
 
   .leadership-title {
     font-size: 2rem;
+  }
+  .quote-section p {
+    font-size: 0.756rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.4;
   }
 }
 @keyframes fadeInUp {

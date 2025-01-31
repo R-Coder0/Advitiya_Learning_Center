@@ -211,7 +211,7 @@
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 80px;
+    top: 70px;
     left: 0;
     width: 100%;
     height: calc(80vh - 64px); /* Occupy the remaining height */
@@ -397,6 +397,9 @@
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+  .navbar{
+    padding: 0.2rem;
+  }
   .action-buttons {
 display: none;
   }
