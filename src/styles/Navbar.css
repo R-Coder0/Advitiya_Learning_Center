@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+  --primary-color: #33808C; /* Muted Teal */
+  --secondary-color: #3B506D; /* Deep Blue-Grey */
+  --accent-color: #f8E0F8; /* Soft Lavender */
+  --light-color: #FFFFFF; /* Pure White for backgrounds */
+  --text-color: #3B506D; /* Deep Blue-Grey for headings and text */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-transparent {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.navbar-transparent .nav-links a,
+.navbar-transparent .dropbtn,
+.navbar-transparent .contact-info a,
+.navbar-transparent .contact-details p {
+  color: #ffffff; /* White text on transparent background */
+}
+
+.nav-links a,
+.dropbtn,
+.contact-info a,
+.contact-details p {
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.dropbtn:hover,
+.contact-info a:hover,
+.contact-details p:hover {
+  color: var(--primary-color); /* Accent color on hover */
+}
+
+.navbar-scrolled {
+  background-color: var(--light-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logo-container img {
+  height: 60px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.3rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  font-family: "Outfit", sans-serif;
+}
+
+.nav-links a:hover {
+  color: #33808C;
+  transform: scale(1.05);
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.phone-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+  background-color: #ffffff00;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.contact-details p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.contact-details a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+  color: var(--secondary-color);
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  padding: 16px;
+  font-weight: 500;
+  font-family: "Outfit", sans-serif;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.dropbtn::after {
+  content: '\25BC'; /* Unicode for down arrow */
+  font-size: 0.8rem;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  min-width: 415px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 1px;
+  margin-top: 5px;
+  text-align: start;
+
+}
+.dropdown-content a {
+  color: var(--text-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+  font-size: 1.3rem;
+  font-family: "Outfit", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-bottom: 1px dashed black;
+}
+
+.dropdown-content a:hover {
+  background-color: #33808C;
+  color: #f8E0F8;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn::after {
+  transform: rotate(180deg);
+}
+
+.dropbtn:hover {
+  color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.menu-toggle {
+  display: none; /* Hide by default */
+}
+
+/* Action Buttons Container */
+.action-buttons {
+  display: flex;
+}
+.mobile-action-buttons{
+  display: none;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(80vh - 64px); /* Occupy the remaining height */
+    background-color: var(--light-color);
+    padding: 1rem;
+    z-index: 999;
+    overflow-y: auto; /* Enable scrolling */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    color: var(--text-color);
+    text-decoration: none;
+  }
+
+  .nav-links a:hover {
+    background-color: #f0f0f0;
+    color: var(--secondary-color);
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-color);
+    z-index: 1000;
+  }
+
+  /* Dropdown for Mobile */
+  .dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dropdown .dropbtn {
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+
+  .dropdown .dropbtn:hover {
+    background-color: #f0f0f0;
+    color: var(--secondary-color);
+  }
+
+  .dropdown-content {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--light-color);
+    border-top: 1px solid #f0f0f0;
+    padding: 0;
+    margin-top: 40px;
+  }
+
+  .dropdown-content a {
+    padding: 10px 15px;
+    text-align: center;
+    border-bottom: 1px dashed #000000;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f0f0f0;
+    color: var(--secondary-color);
+  }
+
+  .dropdown.open .dropdown-content {
+    display: flex;
+  }
+
+  /* Mobile action buttons */
+  .mobile-action-buttons {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .mobile-action-buttons .donate-now-btn {
+    background-color: #f8c202; /* Gold color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .donate-now-btn:hover {
+    background-color: #d4a802;
+    transform: scale(1.05);
+  }
+
+  .mobile-action-buttons .contact-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .contact-btn:hover {
+    background-color: #333;
+    transform: scale(1.05);
+  }
+
+  .phone-icon {
+    font-size: 1.2rem;
+  }
+}
+
+.donate-now-btn {
+  background-color: #33808C; /* Gold color */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px 0px 0px 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.donate-now-btn:hover {
+  background-color: #3B506D; /* Darker gold on hover */
+  transform: scale(1.05);
+}
+
+/* Contact Button */
+.contact-btn {
+  background-color: #000; /* Black */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0px 50px 50px 0px;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #333; /* Darker shade on hover */
+  transform: scale(1.05);
+  color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .action-buttons {
+display: none;
+  }
+}
+
+/* Phone Icon */
+.phone-icon {
+  font-size: 2rem;
+  color: var(--light-color); /* Matches text color */
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Darker background for contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Popup Content */
+.popup-content {
+  background: white;
+  padding: 30px; /* Increased padding for a more spacious feel */
+  border-radius: 15px; /* More rounded corners */
+  text-align: center;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  animation: slideIn 0.3s ease;
+}
+
+.popup-content h2 {
+  margin-bottom: 15px;
+  color: #ff69b4; /* Matching with your theme */
+  font-size: 24px; /* Larger font size */
+  font-weight: 700; /* Bold font weight */
+}
+
+.donate-link {
+  display: inline-block;
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #ff69b4, #ff1493); /* Gradient for more impact */
+  color: white;
+  border-radius: 25px; /* Full-rounded button */
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.donate-link:hover {
+  background-color: #ff1493; /* Consistent hover color */
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.close-popup {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-popup:hover {
+  background-color: #bbb; /* Slightly darker on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
