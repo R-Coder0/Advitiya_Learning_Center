@@ -1,46 +1,358 @@
+.get-involved-hero{
+  background: url('../assets/Hero/getinvolved.jpg') no-repeat center center/cover;
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  /* Adjust transparency for the dark overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.get-involved-hero.hero-content {
+  text-align: left;
+  color: #ffffff;
+  padding: 1rem;
+  position: relative;
+  /* Ensure content is positioned above the overlay */
+  z-index: 1;
+  /* Ensure text appears above the overlay */
+}
+
+.get-involved-hero.hero-content h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.get-involved-hero .hero-content h1::before {
+  content: '';
+  width: 5px;
+  height: 100%;
+  background: var(--secondary-color);
+  /* Set the blue color here */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.breadcrumb {
+  font-size: 1rem;
+  color: #ffffff;
+  display: flex;
+  gap: 0.1rem;
+  align-items: center;
+}
+
+.breadcrumb a {
+  color: #007BFF;
+  /* Blue color for the breadcrumb link */
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-icon {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-right: -0.5rem;
+}
+/* General Styling */
 .coming-soon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #33808C;
+  background-color: #f4f6f9;
+  padding: 60px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.coming-soon .container h1 {
+  color: #2c3e50;
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.coming-soon p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.8;
+  text-align: justify;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #1abc9c;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Cards Styling */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid #3498db;
+  animation: fadeInUp 0.8s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #7f8c8d;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Paragraph Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.criteria-list, .benefits-list {
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: left;
+  list-style-position: inside;
+}
+
+.criteria-list li, .benefits-list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 5px 0;
+}
+
+.criteria-list li::before, .benefits-list li::before {
+  content: "✓";
+  color: #1abc9c;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.head{
+ 
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-weight: bold;
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.benefits-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+.benefits-list li::before {
+  content: "✓";
+  color: #1abc9c;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  
+}
+
+.benefits-list span {
+  font-weight: bold;
+  color: #3498db;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+
+.internship p {
+  text-align: justify;
+  color: #2c3e50;
+  font-size: 1rem;
+  line-height: 1.8;
+  padding: 0 10px;
+  margin-top: 5px;
+  animation: fadeInUp 0.6s ease;
+}
+
+
+/* Call to Action Styling */
+.coming-soon .apply-now {
+  display: inline-block;
+  background-color: #1abc9c;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.coming-soon .apply-now:hover {
+  background-color: #16a085;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .coming-soon p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+  .card-description {
+    font-size: 0.9rem;
+  }
+}
+.inline-span {
+  display: inline;
+  white-space: nowrap;
+}
+@media screen and (max-width: 1024px) {
+  .get-involved-hero h1 {
+    font-size: 4rem;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-description {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .get-involved-hero {
+    height: 50vh;
+    padding: 0 15px;
     text-align: center;
-    padding: 20px;
   }
-  
-  .coming-soon-container {
-    max-width: 600px;
-    border: 1px solid #ddd;
-    padding: 40px;
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .get-involved-hero h1 {
+    font-size: 3rem;
+    padding: 0;
   }
-  
-  .coming-soon-container h1 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
+
+  .breadcrumb {
+    font-size: 0.9rem;
   }
-  
-  .coming-soon-container p {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 20px;
+
+  .cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 10px;
   }
-  
-  .back-home-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #fff;
-    background-color: #007bff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+
+  .card {
+    padding: 15px;
   }
-  
-  .back-home-btn:hover {
-    background-color: #0056b3;
+
+  .criteria-list, .benefits-list {
+    max-width: 100%;
+    padding: 0 15px;
   }
-  
+
+  .head {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .get-involved-hero {
+    height: 40vh;
+  }
+
+  .get-involved-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .breadcrumb {
+    font-size: 0.8rem;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .benefits-list li {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .benefits-list span {
+    display: block;
+  }
+
+  .head {
+    font-size: 0.9rem;
+  }
+}
