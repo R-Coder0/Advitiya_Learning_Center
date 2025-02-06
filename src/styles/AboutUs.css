@@ -15,7 +15,7 @@
   animation: fadeOutDown 1.5s ease-in-out;
 }
 .about-hero {
-  background: url('../assets/Hero/aboutus.jpg') no-repeat center center/cover;
+  background: url('../assets/Homepage/program1.jpg') no-repeat center center/cover;
   position: relative;
   height: 60vh;
   display: flex;
@@ -206,7 +206,7 @@
 
 /* Quotes */
 .quote-section {
-  background: url('../assets/heroimage.jpg') no-repeat center center/cover;
+  background: url('../assets/Homepage/program2.jpg') no-repeat center center/cover;
   /* Replace with your background image path */
   display: flex;
   justify-content: center;
