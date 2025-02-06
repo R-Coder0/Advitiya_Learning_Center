@@ -8,10 +8,11 @@ import EnquiryModal from "../components/EnquiryModal";
 import program1 from "../assets/Homepage/program1.jpg";
 import program2 from "../assets/Homepage/program2.jpg";
 import program3 from "../assets/Homepage/program3.jpg";
-import service1 from "../assets/Homepage/service1.jpg";
-import service2 from "../assets/Homepage/service2.jpg";
-import service3 from "../assets/Homepage/service3.jpg";
-import service4 from "../assets/Homepage/service4.jpg";
+import service2 from "../assets/Homepage/theraputic.jpg";
+import service3 from "../assets/Homepage/arttherapy.jpg";
+import service4 from "../assets/Homepage/vocating.jpg";
+import service5 from "../assets/Homepage/service5.jpg"
+import service6 from "../assets/Homepage/service6.jpg"
 import hero1 from "../assets/Homepage/hero1.jpeg";
 import hero2 from "../assets/Homepage/hero2.jpeg";
 import hero3 from "../assets/Homepage/hero3.jpeg";
@@ -38,7 +39,7 @@ const programsData = [
       <p>To foster a positive learning atmosphere, we implement Positive Behavior Support (PBS) strategies that set clear expectations and routines, while promoting social skills development. Collaborative learning is encouraged through group work, peer tutoring, and cooperative tasks, enhancing engagement and peer interaction.</p><br>
       <p>Individualized Education Programs (IEPs) guide each student's personalized learning path, addressing both academic and emotional needs. Our program emphasizes functional skills training through real-life simulations and project-based learning (PBL), preparing students for practical problem-solving.</p><br>
       <p>Additionally, we offer Functional Communication Training for students with communication challenges and incorporate mindfulness and relaxation techniques to help manage stress and improve focus. By combining adaptive learning technologies with social-emotional learning (SEL) practices, we aim to develop our students' emotional intelligence and interpersonal skills, ensuring a holistic and effective educational experience.</p>`,
-    image: program3,
+    image: program1,
   },
   {
     id: 2,
@@ -50,7 +51,7 @@ const programsData = [
       <p>Each student's therapy plan is uniquely tailored to their specific needs and goals, ensuring a personalized approach that fosters growth and development. Our program also incorporates sensory integration strategies to help students manage sensory processing challenges effectively.</p><br>
       <p>Cognitive-behavioral therapy (CBT) is utilized to address emotional and psychological issues, while our social skills training sessions involve group activities and role-playing exercises to build confidence and improve interpersonal relationships.</p><br>
       <p>We understand the importance of a consistent therapeutic approach, which is why we work closely with families to ensure these strategies are implemented both at school and at home, creating a supportive and comprehensive care network.</p>`,
-    image: program1,
+    image: program2,
   },
   {
     id: 3,
@@ -62,7 +63,7 @@ const programsData = [
       <p>This program is designed to build confidence and independence, teaching students how to perform tasks relevant to their interests and capabilities. Through hands-on training and real-life simulations, students gain the skills needed to excel in the workplace.</p><br>
       <p>Moreover, our program includes job coaching and placement services, assisting students in finding meaningful employment opportunities. We partner with local businesses and organizations to provide internships and job shadowing experiences, allowing students to apply their skills in supportive environments.</p><br>
       <p>By offering a comprehensive approach to vocational training, we empower our students to achieve their full potential and lead fulfilling lives.</p>`,
-    image: program2,
+    image: program3,
   },
 ];
 const services = [
@@ -70,7 +71,7 @@ const services = [
     title: "Individualized Learning Plans",
     description:
       "Customized education plans that cater to each student's learning style and pace.",
-    image: service1,
+    image: program1,
   },
   {
     title: "Therapeutic Services",
@@ -88,7 +89,7 @@ const services = [
     title: "NIOS Classes",
     description:
       "Open schooling options through NIOS to help students achieve academic qualifications.",
-    image: service4,
+    image: program2,
   },
   // Demo Services
   {
@@ -107,13 +108,13 @@ const services = [
     title: "Music Therapy",
     description:
       "Music-based interventions to improve physical and emotional health.",
-    image: service2,
+    image: service5,
   },
   {
     title: "Sports Activities",
     description:
       "Inclusive sports programs to develop physical fitness and teamwork skills.",
-    image: service1,
+    image: service6,
   },
 ];
 const renderProgramDescription = (description) => {
