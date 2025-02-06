@@ -214,7 +214,7 @@
     top: 70px;
     left: 0;
     width: 100%;
-    height: calc(80vh - 64px); /* Occupy the remaining height */
+    height: calc(93vh - 64px); /* Occupy the remaining height */
     background-color: var(--light-color);
     padding: 1rem;
     z-index: 999;
